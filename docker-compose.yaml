@@ -1,0 +1,14 @@
+version: '2'
+services:
+  gpmaster:
+    privileged: true
+    container_name: gpdb-master
+    image: registry.cn-hangzhou.aliyuncs.com/septnet/gpdb:6.9-test
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./gpdb-master/data:/data
+      - ./gpdb-master/data1:/data1
+      - ./gpdb-master/data2:/data2
+    #entrypoint: /usr/sbin/sshd -D 
+    entrypoint: /usr/sbin/init 
