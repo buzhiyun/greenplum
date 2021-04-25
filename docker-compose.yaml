@@ -3,7 +3,7 @@ services:
   gpmaster:
     privileged: true
     container_name: gpdb-master
-    image: registry.cn-hangzhou.aliyuncs.com/septnet/gpdb:6.9-test
+    image: buzhiyun/greenplum:v6.16
     ports:
       - "5432:5432"
     volumes:
